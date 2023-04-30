@@ -64,7 +64,7 @@ class Person:
 
     def heal(self):
         """Heals this person from infection"""
-        self.is_infected = True
+        self.is_infected = False
         self.days_infected = 0
 
     def die(self):
