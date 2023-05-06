@@ -102,14 +102,21 @@ class Population:
         """
         self.sim = sim
 
-        self.population = []
-        self.get_population()
+        self.population = self.__get_population()
 
-    def get_population(self):
-        """Fills in a random Person in the `population` attribute"""
+    def __get_population(self):
+        """
+        Fills in a random Person in the `population` attribute
+        :return: list of population
+        :rtype: list
+        """
+        _population = []
+
         for i in range(self.sim.population_size):
             person = Person()
-            self.population.append(person)
+            _population.append(person)
+
+        return _population
 
     def initial_infection(self):
         """Infect an initial portion of the population"""
